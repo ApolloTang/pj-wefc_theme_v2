@@ -1,4 +1,7 @@
-In each sass or scss file "_base.scss" is imported. Once "_base.scss" is read it will import more libraries and maxin.
+Note by Apollo Tang July 29, 2012
+
+	In each sass or scss file "_base.scss" is imported. 
+	Once "_base.scss" is read it will import more libraries and maxin.
 
 
 

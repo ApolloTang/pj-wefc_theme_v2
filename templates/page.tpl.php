@@ -73,9 +73,9 @@
 <div id="page">
 
   <header id="header" class="dev" role="banner">
-	<div id="logo-wrap" class=" dev"></div>
-	<div id="top-wrap" class=" dev"></div>
-	<div id="slide-wrap" class=" dev"></div>
+	<div id="logo-wrap" class=" dev">logo</div>
+	<div id="top-wrap" class=" dev">top-wrap</div>
+	<div id="slide-wrap" class=" dev">slide</div>
   </header>
 
 

@@ -59,7 +59,6 @@ stylesheets[all][] = css/wefc-dev.css
 
 ;  :/apollo\: use fix width
 stylesheets[all][] = css/layouts/fixed-width.css
-stylesheets[all][] = css/layouts/fixed-width-wefc.css
 
 stylesheets[all][] = css/page-backgrounds.css
 stylesheets[all][] = css/tabs.css
