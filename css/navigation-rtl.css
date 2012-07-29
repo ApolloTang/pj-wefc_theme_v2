@@ -2,6 +2,12 @@
  * @file
  * RTL companion for the navigation.css file.
  */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/_custom-wefc.sass */
+/*   Importing: wefc sass library */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/wefc-lib/_mazins_all.sass */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/wefc-lib/_maxins_helper.sass */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/wefc-lib/_maxins_links.sass */
+/* ------ Defining Maxins for Links */
 /* line 9, ../sass/navigation-rtl.scss */
 ul li.collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABNJREFUCB1j4GASYFJgcmD+A4IADUIDfIUMT4wAAAAASUVORK5CYII=');

@@ -72,8 +72,14 @@
 
 <div id="page">
 
-  <header id="header" role="banner">
+  <header id="header" class="dev" role="banner">
+	<div id="logo-wrap" class=" dev"></div>
+	<div id="top-wrap" class=" dev"></div>
+	<div id="slide-wrap" class=" dev"></div>
+  </header>
 
+
+<div id="temp-wrap">
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
     <?php endif; ?>
@@ -110,7 +116,19 @@
 
     <?php print render($page['header']); ?>
 
-  </header>
+    <?php
+      // Render the test_region to see if there's anything in them.
+      $test_region  = render($page['test_region']);
+    ?>
+
+    <?php if ($test_region): ?>
+      <aside class="test-region">
+        <?php print $test_region ?>
+      </aside><!-- /.test-region -->
+    <?php endif; ?>	
+	
+</div>
+
 
   <div id="main">
 

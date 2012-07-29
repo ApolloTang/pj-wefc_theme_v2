@@ -4,6 +4,12 @@
  *
  * Add wireframes to the basic layout elements.
  */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/_custom-wefc.sass */
+/*   Importing: wefc sass library */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/wefc-lib/_mazins_all.sass */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/wefc-lib/_maxins_helper.sass */
+/* - - - - - - - - - - - - - - - - - - - - - - - File: sass/wefc-lib/_maxins_links.sass */
+/* ------ Defining Maxins for Links */
 /* line 19, ../sass/wireframes.scss */
 .with-wireframes #header,
 .with-wireframes #main,
