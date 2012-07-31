@@ -6,10 +6,21 @@
  * http://www.gnu.org/licenses/gpl.html
  * 
  * Re-theming for wefc by Apollo Tang July 21, 2012
+ 
+//$ddblock-width: 900px
+//$ddblock-height: 328px
+$original-w: 900px
+$original-h: 328px
 
 
-$ddblock-width: 900px
-$ddblock-height: 328px
+$aspect-ratio: $original-h/$original-w
+$image-w: 960px
+$image-h: $aspect-ratio * $image-w
+
+
+
+$ddblock-width: $image-w
+$ddblock-height: $image-h
 
 div.ddblock-cycle-upright20p div
   &.container
@@ -24,7 +35,7 @@ div.ddblock-cycle-upright20p div
     /* width is set in $ddblock-width
   &.slider-inner
     background: transparent url(images/transparent_bg.png) repeat scroll 0 0 !important
-    height: 303px
+    height: $ddblock-height
     overflow: hidden
     position: relative
     visibility: hidden
@@ -35,7 +46,7 @@ div.ddblock-cycle-upright20p div
     position: absolute
     top: 0
   &.slide-inner img
-    height: 303px
+    height: $ddblock-height
     margin: 0 !important
     padding: 0 !important
     width: $ddblock-width
@@ -49,7 +60,7 @@ div.ddblock-cycle-upright20p div
     width: $ddblock-width
     /* width is set in $ddblock-width
   &.slide-text-vertical
-    height: 303px
+    height: $ddblock-height
     width: 140px
   &.slide-text-top
     top: 7px

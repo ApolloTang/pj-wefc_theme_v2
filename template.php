@@ -212,8 +212,12 @@ function STARTERKIT_preprocess_region(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("block" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_block(&$variables, $hook) {
+function wefc_v2_preprocess_block(&$variables, $hook) {
+dsm($variables['block']);
+//echo "<pre>";
+//var_dump($variables['block']->region);
+//echo "</pre>";
+
   // Add a count to all the blocks in the region.
   // $variables['classes_array'][] = 'count-' . $variables['block_id'];
 
@@ -222,5 +226,9 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //if ($variables['block_html_id'] == 'block-system-main') {
   //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
   //}
+if ($variables['block']->region == "header") {
+	dsm($variables['block']->subject);
+	unset($variables['block']->subject);
 }
-// */
+}
+

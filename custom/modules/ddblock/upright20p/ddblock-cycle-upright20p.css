@@ -7,17 +7,17 @@
  * Re-theming for wefc by Apollo Tang July 21, 2012 */
 div.ddblock-cycle-upright20p div.container {
   background-color: white;
-  width: 900px;
+  width: 960px;
   /* width is set in $ddblock-width */ }
 div.ddblock-cycle-upright20p div.container-inner {
-  height: 328px;
+  height: 349.867px;
   position: relative; }
 div.ddblock-cycle-upright20p div.slider {
-  width: 900px;
+  width: 960px;
   /* width is set in $ddblock-width */ }
 div.ddblock-cycle-upright20p div.slider-inner {
   background: transparent url(images/transparent_bg.png) repeat scroll 0 0 !important;
-  height: 303px;
+  height: 349.867px;
   overflow: hidden;
   position: relative;
   visibility: hidden; }
@@ -28,10 +28,10 @@ div.ddblock-cycle-upright20p div.slide {
   position: absolute;
   top: 0; }
 div.ddblock-cycle-upright20p div.slide-inner img {
-  height: 303px;
+  height: 349.867px;
   margin: 0 !important;
   padding: 0 !important;
-  width: 900px;
+  width: 960px;
   /* width is set in $ddblock-width */ }
 div.ddblock-cycle-upright20p div.slide-text {
   background: transparent url(images/transparent_bg.png) repeat scroll 0 0 !important;
@@ -39,10 +39,10 @@ div.ddblock-cycle-upright20p div.slide-text {
 div.ddblock-cycle-upright20p div.slide-text-horizontal {
   height: 85px;
   left: 0;
-  width: 900px;
+  width: 960px;
   /* width is set in $ddblock-width */ }
 div.ddblock-cycle-upright20p div.slide-text-vertical {
-  height: 303px;
+  height: 349.867px;
   width: 140px; }
 div.ddblock-cycle-upright20p div.slide-text-top {
   top: 7px; }
@@ -118,7 +118,7 @@ div.ddblock-cycle-upright20p div.prev-next-pager {
   height: 17px;
   left: 0;
   position: relative;
-  width: 900px;
+  width: 960px;
   /* width is set in $ddblock-width */ }
   div.ddblock-cycle-upright20p div.prev-next-pager a {
     background: black;

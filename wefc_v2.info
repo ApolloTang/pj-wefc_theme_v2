@@ -51,8 +51,7 @@ stylesheets[all][] = system.menus.css
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/wireframes.css
 
-;  :/apollo\: style sheet used during developement
-stylesheets[all][] = css/wefc-dev.css
+
 
 ;  :/apollo\: not using reponsive layout 
 ;stylesheets[all][] = css/layouts/responsive-sidebars.css
@@ -76,6 +75,10 @@ stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
 
+; style sheet used during developement
+stylesheets[all][] = css/wefc-dev.css
+; Custom style sheet for wefc
+stylesheets[all][] = css/wefc.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
@@ -110,9 +113,10 @@ stylesheets[all][] = css/print.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
-regions[test_region]    = test region
+
 regions[header]         = Header
 regions[navigation]     = Navigation bar
+regions[slide_region]    = slide region
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content

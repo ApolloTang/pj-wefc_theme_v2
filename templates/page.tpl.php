@@ -73,61 +73,97 @@
 <div id="page">
 
   <header id="header" class="dev" role="banner">
-	<div id="logo-wrap" class=" dev">logo</div>
-	<div id="top-wrap" class=" dev">top-wrap</div>
-	<div id="slide-wrap" class=" dev">slide</div>
+	
+	<div id="logo-wrap" class=" dev">    
+		<?php if ($logo): ?>
+      		<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+    	<?php endif; ?>
+	</div>
+	
+	<div id="top-wrap" class=" dev">
+
+
+		<div id="hidden-wrap">
+		    <?php if ($site_name || $site_slogan): ?>
+		      <hgroup id="name-and-slogan">
+		        <?php if ($site_name): ?>
+		          <h1 id="site-name">
+		            <!--a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a-->
+		          </h1>
+		        <?php endif; ?>
+		      </hgroup><!-- /#name-and-slogan -->
+		    <?php endif; ?>
+		</div>
+		<!-- /#hidden-wrap -->		
+		
+		<?php print render($page['header']); ?>
+		
+		<div id="navigation">
+		
+		    <?php if ($main_menu): ?>
+	  	      <nav id="main-menu" role="navigation">
+		        <?php
+		        // This code snippet is hard to modify. We recommend turning off the
+		        // "Main menu" on your sub-theme's settings form, deleting this PHP
+		        // code block, and, instead, using the "Menu block" module.
+		        // @see http://drupal.org/project/menu_block
+		        print theme('links__system_main_menu', array(
+		          'links' => $main_menu,
+		          'attributes' => array(
+		            'class' => array('links', 'inline', 'clearfix'),
+		          ),
+		          'heading' => array(
+		            'text' => t('Main menu'),
+		            'level' => 'h2',
+		            'class' => array('element-invisible'),
+		          ),
+		        ));  ?>
+		      </nav>
+		    <?php endif; ?>
+    
+			<?php if ($secondary_menu): ?>
+			  <nav id="secondary-menu" role="navigation">
+				<?php print theme('links__system_secondary_menu', array(
+				  'links' => $secondary_menu,
+				  'attributes' => array(
+					'class' => array('links', 'inline', 'clearfix'),
+				  ),
+				  'heading' => array(
+					'text' => $secondary_menu_heading,
+					'level' => 'h2',
+					'class' => array('element-invisible'),
+				  ),
+				)); ?>
+			  </nav>
+			<?php endif; ?>    
+    
+			<?php print render($page['navigation']); ?>
+			
+		</div>
+		<!-- /#navigation -->
+    
+    </div>
+	<!-- /#top-wrap -->
+	
+	<div id="slide-wrap" class="clearfix dev">
+			
+	    <?php
+			// Render the slide_region to see if there's anything in them.
+			$slide_region  = render($page['slide_region']);
+		?>
+		<?php if ($slide_region): ?>
+		  <div id="slide-region">
+			<?php print $slide_region ?>
+		  </div>
+		  <!-- /.slide-region -->
+		<?php endif; ?>	
+		
+	</div>
+	<!-- /#slide-wrap -->
+	
   </header>
 
 
-<div id="temp-wrap">
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-    <?php endif; ?>
-
-    <?php if ($site_name || $site_slogan): ?>
-      <hgroup id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <h1 id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
-      </hgroup><!-- /#name-and-slogan -->
-    <?php endif; ?>
-
-    <?php if ($secondary_menu): ?>
-      <nav id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => $secondary_menu_heading,
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-      </nav>
-    <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-
-    <?php
-      // Render the test_region to see if there's anything in them.
-      $test_region  = render($page['test_region']);
-    ?>
-
-    <?php if ($test_region): ?>
-      <aside class="test-region">
-        <?php print $test_region ?>
-      </aside><!-- /.test-region -->
-    <?php endif; ?>	
-	
-</div>
 
 
   <div id="main">
@@ -151,33 +187,7 @@
       <?php print $feed_icons; ?>
     </div><!-- /#content -->
 
-    <div id="navigation">
 
-      <?php if ($main_menu): ?>
-      	
-        <nav id="main-menu" role="navigation">
-          <?php
-          // This code snippet is hard to modify. We recommend turning off the
-          // "Main menu" on your sub-theme's settings form, deleting this PHP
-          // code block, and, instead, using the "Menu block" module.
-          // @see http://drupal.org/project/menu_block
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
-      <?php endif; ?>
-
-      <?php print render($page['navigation']); ?>
-
-    </div><!-- /#navigation -->
 
     <?php
       // Render the sidebars to see if there's anything in them.
