@@ -51,8 +51,6 @@ stylesheets[all][] = system.menus.css
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/wireframes.css
 
-
-
 ;  :/apollo\: not using reponsive layout 
 ;stylesheets[all][] = css/layouts/responsive-sidebars.css
 
@@ -62,10 +60,6 @@ stylesheets[all][] = css/layouts/fixed-width.css
 stylesheets[all][] = css/page-backgrounds.css
 stylesheets[all][] = css/tabs.css
 stylesheets[all][] = css/pages.css
-
-;  :/apollo\: wefc-pages.css will override pages.css
-stylesheets[all][] = css/pages-wefc.css
-
 stylesheets[all][] = css/blocks.css
 stylesheets[all][] = css/navigation.css
 stylesheets[all][] = css/views-styles.css
@@ -75,10 +69,8 @@ stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
 
-; style sheet used during developement
-stylesheets[all][] = css/wefc-dev.css
 ; Custom style sheet for wefc
-stylesheets[all][] = css/wefc.css
+stylesheets[all][] = css/wefc-theme.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.
 ; Instead, Zen now adds conditional-comment-included classes to the html
