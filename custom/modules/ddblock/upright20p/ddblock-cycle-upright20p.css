@@ -1,10 +1,13 @@
-/* Dynamic display block module template (Drupal 7): upright20p - Cascading Style Sheet 
+/* - - - - - - - - - - - - - - - -  File: custom/modules/ddblock/upright20p/ddblock-cycle-upright20p.sass
+ *  Re-theming for wefc by Apollo Tang July 21, 2012 
+ * - - - - - - - - - - - - - - - - 
+ * Dynamic display block module template (Drupal 7): upright20p - Cascading Style Sheet 
  * (c) Copyright Phelsa Information Technology, 2011. All rights reserved.
  * Version 1.0 ( 21-JAN-2011 )
  * Licenced under GPL license
  * http://www.gnu.org/licenses/gpl.html
  * 
- * Re-theming for wefc by Apollo Tang July 21, 2012 */
+ */
 div.ddblock-cycle-upright20p div.container {
   background-color: white;
   width: 960px;
@@ -186,5 +189,12 @@ div.ddblock-cycle-upright20p div.spacer-horizontal {
   height: 5px;
   background-color: #cccccc; }
 
-/******************** previous next pager on slide ********************* */
-/******************** previous next pager on slide ********************* */
+/* - - - - - - - - - - - - - - - -  File: custom/modules/ddblock/upright20p/ddblock-cycle-upright20p-ie.sass
+ *  For wefc by Apollo Tang. 2012-08-05
+ *  
+ *  ::: Fix Internet Explore ::: 
+ * - - - - - - - - - - - - - - - - 
+ * / */
+.lt-ie9 div.ddblock-cycle-upright20p div.slide-inner {
+  /* ApolloTang 2012-08-05 width is requiered for ie8  */
+  width: 960px; }

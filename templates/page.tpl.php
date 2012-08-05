@@ -88,7 +88,7 @@
 		      <hgroup id="name-and-slogan">
 		        <?php if ($site_name): ?>
 		          <h1 id="site-name">
-		            <!--a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a-->
+		            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
 		          </h1>
 		        <?php endif; ?>
 		      </hgroup><!-- /#name-and-slogan -->
@@ -96,7 +96,10 @@
 		</div>
 		<!-- /#hidden-wrap -->		
 		
-		<?php print render($page['header']); ?>
+		<div id="header-region-wrap">
+			<?php print render($page['header']); ?>
+		</div>
+		<!-- /#header-region-wrap-->		
 		
 		<div id="navigation">
 		
