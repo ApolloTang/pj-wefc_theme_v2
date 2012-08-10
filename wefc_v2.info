@@ -105,7 +105,8 @@ stylesheets[all][] = css/wefc-theme.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
-
+regions[top_navigation] = Top Navigation
+regions[search]         = Search
 regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[slide_region]    = slide region

@@ -94,12 +94,30 @@
 		      </hgroup><!-- /#name-and-slogan -->
 		    <?php endif; ?>
 		</div>
-		<!-- /#hidden-wrap -->		
+		<!-- /#hidden-wrap -->
 		
-		<div id="header-region-wrap" class="dev1">
-			<?php print render($page['header']); ?>
-		</div>
-		<!-- /#header-region-wrap-->		
+		<?php if ($page['search']): ?>
+			<div id="search-region-wrap" class="dev1">
+				<?php print render($page['search']); ?>
+			</div>
+			<!-- /#search-region-wrap-->
+		<?php endif; ?>
+		
+		<?php if ($page['top_navigation']): ?>
+			<div id="top-navigation-region-wrap" class="dev1">
+				<?php print render($page['top_navigation']); ?>
+			</div>
+			<!-- /#top-navigation-region-wrap-->
+		<?php endif; ?>
+
+
+		
+		<?php if ($page['header']): ?>
+			<div id="header-region-wrap" class="dev1">
+				<?php print render($page['header']); ?>
+			</div>
+			<!-- /#header-region-wrap-->
+		<?php endif; ?>
 		
 		<div id="navigation" class="dev1">
 		

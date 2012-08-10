@@ -231,10 +231,10 @@ function wefc_v2_preprocess_block(&$variables, $hook) {
 	} //End if ( $dev ==TRUE ) 
 	
 	// WEFC:: added by Apollo Tang, Aug 10, 2012  
-	// Remove block title in header region
-	if ($variables['block']->region == "header") {
-		dsm($variables['block']->subject);
-		$variables['block']->subject = '';
-	}
+	// Remove block title in various regions
+	if (   $variables['block']->region == "top_navigation"
+		|| $variables['block']->region == "search"
+		|| $variables['block']->region == "header"	
+	) { $variables['block']->subject = ''; }
 }
 
