@@ -213,22 +213,28 @@ function STARTERKIT_preprocess_region(&$variables, $hook) {
  *   The name of the template being rendered ("block" in this case.)
  */
 function wefc_v2_preprocess_block(&$variables, $hook) {
-dsm($variables['block']);
-//echo "<pre>";
-//var_dump($variables['block']->region);
-//echo "</pre>";
-
-  // Add a count to all the blocks in the region.
-  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
-
-  // By default, Zen will use the block--no-wrapper.tpl.php for the main
-  // content. This optional bit of code undoes that:
-  //if ($variables['block_html_id'] == 'block-system-main') {
-  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
-  //}
-if ($variables['block']->region == "header") {
-	dsm($variables['block']->subject);
-	unset($variables['block']->subject);
-}
+	  // Add a count to all the blocks in the region.
+	  // $variables['classes_array'][] = 'count-' . $variables['block_id'];
+	
+	  // By default, Zen will use the block--no-wrapper.tpl.php for the main
+	  // content. This optional bit of code undoes that:
+	  //if ($variables['block_html_id'] == 'block-system-main') {
+	  //  $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('block__no_wrapper'));
+	  //}
+	  		
+	  		
+	// WEFC:: added by Apollo Tang, Aug 10, 2012
+	// Code use in development
+	$dev = TRUE;  if ( $dev ==TRUE ) { 
+		dsm($variables['block']);
+		//echo "<pre>"; var_dump($variables['block']->region); echo "</pre>";
+	} //End if ( $dev ==TRUE ) 
+	
+	// WEFC:: added by Apollo Tang, Aug 10, 2012  
+	// Remove block title in header region
+	if ($variables['block']->region == "header") {
+		dsm($variables['block']->subject);
+		$variables['block']->subject = '';
+	}
 }
 
