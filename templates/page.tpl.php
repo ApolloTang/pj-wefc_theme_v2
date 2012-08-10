@@ -73,7 +73,7 @@
 <div id="page">
 
   <header id="header" class="dev" role="banner">
-	
+
 	<div id="logo-wrap" class=" dev">    
 		<?php if ($logo): ?>
       		<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
@@ -96,12 +96,12 @@
 		</div>
 		<!-- /#hidden-wrap -->		
 		
-		<div id="header-region-wrap">
+		<div id="header-region-wrap" class="dev1">
 			<?php print render($page['header']); ?>
 		</div>
 		<!-- /#header-region-wrap-->		
 		
-		<div id="navigation">
+		<div id="navigation" class="dev1">
 		
 		    <?php if ($main_menu): ?>
 	  	      <nav id="main-menu" role="navigation">
@@ -165,7 +165,6 @@
 	<!-- /#slide-wrap -->
 	
   </header>
-
 
 
 
