@@ -225,7 +225,7 @@ function wefc_v2_preprocess_block(&$variables, $hook) {
 	  		
 	// WEFC:: added by Apollo Tang, Aug 10, 2012
 	// Code use in development
-	$dev = TRUE;  if ( $dev ==TRUE ) { 
+	$dev = FALSE;  if ( $dev ==TRUE ) { 
 		dsm($variables['block']);
 		//echo "<pre>"; var_dump($variables['block']->region); echo "</pre>";
 	} //End if ( $dev ==TRUE ) 

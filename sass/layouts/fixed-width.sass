@@ -12,8 +12,8 @@
 
 // We are going to create a 980px wide, 5 column grid with 20px gutters between
 // columns (applied as 10px of left/right padding on each column).
-$zen-column-count: 5
-$zen-gutter-width: 20px
+$zen-column-count: 14
+$zen-gutter-width: 0px
 $zen-grid-width: 980px
 
 // IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
@@ -48,7 +48,7 @@ $zen-auto-include-item-base: false
 
 #header,
 #content,
-//#navigation,   // Apollo Tang July 29, 2012: don't apply standard set of properites to navigation:  
+//#navigation,   // Apollo Tang July 29, 2012: don't apply standard set of zen grid properites to navigation:  
 .region-sidebar-first,
 .region-sidebar-second,
 #footer
@@ -67,14 +67,14 @@ $zen-auto-include-item-base: false
  * These wrappers: #logo-wrap, #top-wrap, and #slide-wrap were added for wefc
  */
 #logo-wrap /* Span 4 columns, starting in 2nd column from left. */
-  @include zen-grid-item(1, 1)
+  @include zen-grid-item(3, 1)
 
 #top-wrap
   /* Span 1 column, starting in 1st column from left. */
-  @include zen-grid-item(4, 2)
-  
+  @include zen-grid-item(11, 4)
+    
 #slide-wrap
-  @include zen-clear(left)
+  @include zen-clear(both)
   
 
 /*
@@ -103,33 +103,33 @@ $zen-auto-include-item-base: false
 
 .sidebar-first
   #content
-    /* Span 4 columns, starting in 2nd column from left.
-    +zen-grid-item(4, 2)
+    /* Span 4 columns, starting in 2nd column from left. */
+    +zen-grid-item(11, 4)
   .region-sidebar-first
-    /* Span 1 column, starting in 1st column from left.
-    +zen-grid-item(1, 1)
+    /* Span 1 column, starting in 1st column from left. */
+    +zen-grid-item(3, 1)
 
 /*
  * The layout when there is only one sidebar, the right one. */
 
 .sidebar-second
   #content
-    /* Span 4 columns, starting in 1st column from left.
-    +zen-grid-item(4, 1)
+    /* Span 4 columns, starting in 1st column from left. */
+    +zen-grid-item(11, 1)
   .region-sidebar-second
-    /* Span 1 column, starting in 5th column from left.
-    +zen-grid-item(1, 5)
+    /* Span 1 column, starting in 5th column from left. */
+    +zen-grid-item(3, 12)
 
 /*
  * The layout when there are two sidebars.  */
 
 .two-sidebars
   #content
-    /* Span 3 columns, starting in 2nd column from left.
-    +zen-grid-item(3, 2)
+    /* Span 3 columns, starting in 2nd column from left.  */
+    +zen-grid-item(8, 4)
   .region-sidebar-first
-    /* Span 1 column, starting in 1st column from left.
-    +zen-grid-item(1, 1)
+    /* Span 1 column, starting in 1st column from left.  */
+    +zen-grid-item(3, 1)
   .region-sidebar-second
-    /* Span 1 column, starting in 5th column from left.
-    +zen-grid-item(1, 5)
+    /* Span 1 column, starting in 5th column from left.  */
+    +zen-grid-item(3, 12)
