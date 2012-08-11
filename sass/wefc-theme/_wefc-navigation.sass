@@ -20,26 +20,37 @@ nav, .region-navigation
   float: left 
 
 
-  
-#top-navigation-region-wrap  // copy that for #navigation in file: navigation.scss 
-  /* overflow: hidden  */ /* Sometimes you want to prevent overlapping with main div. */
+
+
+
+/* style wefc main menu */
+#main-menu
+  ul.links li
+    margin: 0
+    padding: 0
+    a
+      background: hsl(94, 27%, 57%) url(images/tabs.png) repeat-x
+      border: solid hsl(94, 46%, 28%) 1px
+      padding: 5px 14px 5px 14px
+      margin: 0 1px 0 0
+ 
+ 
+/* Top navigation styling */  
+#top-navigation-region-wrap  // copy that from #navigation in file: navigation.scss 
+  /* overflow: hidden  */ 
   .block
     margin-bottom: 0 
-
   .block-menu .block-title,
   .block-menu-block .block-title 
     @include element-invisible() 
-
-
-  ul.links, /* Main menu and secondary menu links */
-  ul.menu  /* Menu block links */
+  ul.links, 
+  ul.menu 
     margin: 0 
     padding: 0 
     text-align: left  /* LTR */
-
     li  /* A simple method to get navigation links to appear in one line. */
       float: left  /* LTR */
       padding: 0 10px 0 0  /* LTR */
       list-style-type: none 
-      list-style-image: none 
-
+      list-style-image: none
+      
