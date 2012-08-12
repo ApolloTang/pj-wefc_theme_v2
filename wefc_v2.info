@@ -107,7 +107,7 @@ stylesheets[all][] = css/wefc-theme.css
 
 regions[top_navigation] = Top Navigation
 regions[search]         = Search
-regions[header]         = Header
+regions[headline]       = Headline
 regions[navigation]     = Navigation bar
 regions[slide_region]    = slide region
 regions[highlighted]    = Highlighted

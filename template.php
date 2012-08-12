@@ -234,7 +234,7 @@ function wefc_v2_preprocess_block(&$variables, $hook) {
 	// Remove block title in various regions
 	if (   $variables['block']->region == "top_navigation"
 		|| $variables['block']->region == "search"
-		|| $variables['block']->region == "header"	
+		|| $variables['block']->region == "headline"	
 	) { $variables['block']->subject = ''; }
 }
 

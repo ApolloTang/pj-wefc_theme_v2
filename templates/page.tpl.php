@@ -79,9 +79,9 @@
       		<a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
     	<?php endif; ?>
 	</div>
-	
+	<!-- /#logo-wrap -->
+		
 	<div id="top-wrap" class=" dev">
-
 
 		<div id="hidden-wrap">
 		    <?php if ($site_name || $site_slogan): ?>
@@ -96,28 +96,26 @@
 		</div>
 		<!-- /#hidden-wrap -->
 		
-		<?php if ($page['search']): ?>
-			<div id="search-region-wrap" class="dev1">
+		<div id="search-region-wrap" class="dev1">
+			<?php if ($page['search']): ?>
 				<?php print render($page['search']); ?>
-			</div>
-			<!-- /#search-region-wrap-->
-		<?php endif; ?>
+			<?php endif; ?>
+		</div>
+		<!-- /#search-region-wrap-->
 		
-		<?php if ($page['top_navigation']): ?>
-			<div id="top-navigation-region-wrap" class="dev1">
+		<div id="top-navigation-region-wrap" class="dev1">		
+			<?php if ($page['top_navigation']): ?>
 				<?php print render($page['top_navigation']); ?>
-			</div>
-			<!-- /#top-navigation-region-wrap-->
-		<?php endif; ?>
+			<?php endif; ?>
+		</div>
+		<!-- /#top-navigation-region-wrap-->
 
-
-		
-		<?php if ($page['header']): ?>
-			<div id="header-region-wrap" class="dev1">
-				<?php print render($page['header']); ?>
-			</div>
-			<!-- /#header-region-wrap-->
-		<?php endif; ?>
+		<div id="headline-region-wrap" class="dev1">
+			<?php if ($page['headline']): ?>
+				<?php print render($page['headline']); ?>
+			<?php endif; ?>
+		</div>
+		<!-- /#header-region-wrap-->
 		
 		<div id="navigation" class="dev1">
 		
@@ -183,8 +181,7 @@
 	<!-- /#slide-wrap -->
 	
   </header>
-
-
+  <!-- /#header -->
 
   <div id="main">
 
@@ -205,9 +202,8 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
-    </div><!-- /#content -->
-
-
+    </div>
+    <!-- /#content -->
 
     <?php
       // Render the sidebars to see if there's anything in them.
@@ -219,13 +215,16 @@
       <aside class="sidebars">
         <?php print $sidebar_first; ?>
         <?php print $sidebar_second; ?>
-      </aside><!-- /.sidebars -->
+      </aside>
+      <!-- /.sidebars -->
     <?php endif; ?>
 
-  </div><!-- /#main -->
+  </div>
+  <!-- /#main -->
 
   <?php print render($page['footer']); ?>
 
-</div><!-- /#page -->
+</div>
+<!-- /#page -->
 
 <?php print render($page['bottom']); ?>
