@@ -186,6 +186,7 @@
   <div id="main">
 
     <div id="content" class="column" role="main">
+    <div id="content-inner">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
@@ -202,6 +203,8 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
+    </div>
+    <!-- /#content-inner -->
     </div>
     <!-- /#content -->
 
