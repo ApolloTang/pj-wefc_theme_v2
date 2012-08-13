@@ -70,6 +70,7 @@ stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
 
 ; Custom style sheet for wefc
+stylesheets[all][] = css/type/at-font-face.css
 stylesheets[all][] = css/wefc-theme.css
 
 ; Built-in conditional stylesheet support has been removed from Zen 7.x-5.x.

@@ -2,7 +2,6 @@
 .sass-cache
 *~
 _.swp
-css
-css/
+!css/type/at-font-face.css
 custom/modules/ddblock/upright20p/ddblock-cycle-upright20p.css
 TODO.txt
