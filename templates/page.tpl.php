@@ -164,25 +164,25 @@
     </div>
 	<!-- /#top-wrap -->
 	
-	<div id="slide-wrap" class="clearfix dev">
-			
-	    <?php
-			// Render the slide_region to see if there's anything in them.
-			$slide_region  = render($page['slide_region']);
-		?>
-		<?php if ($slide_region): ?>
-		  <div id="slide-region">
-			<?php print $slide_region ?>
-		  </div>
-		  <!-- /.slide-region -->
-		<?php endif; ?>	
-		
-	</div>
-	<!-- /#slide-wrap -->
-	
   </header>
   <!-- /#header -->
 
+  
+  <div id="slide-wrap" class="clearfix dev">
+    <?php
+  	  // Render the slide_region to see if there's anything in them.
+  	  $slide_region  = render($page['slide_region']);
+  	?>
+  	<?php if ($slide_region): ?>
+  	  <div id="slide-region">
+  		<?php print $slide_region ?>
+  	  </div>
+  	  <!-- /.slide-region -->
+  	<?php endif; ?>	
+  </div>
+  <!-- /#slide-wrap -->
+
+  
   <div id="main">
 
     <div id="content" class="column" role="main">

@@ -58,6 +58,7 @@ $zen-auto-include-item-base: false
  * Containers for grid items and flow items. */
 
 #header,
+#slide-wrap,  // Apollo Tang, Aug 13, 2012 
 #main,
 #footer
   +zen-grid-container
@@ -73,10 +74,7 @@ $zen-auto-include-item-base: false
   /* Span 1 column, starting in 1st column from left. */
   @include zen-grid-item(11, 4)
     
-#slide-wrap
-  @include zen-clear(both)
   
-
 /*
  * Navigation bar  */
 
