@@ -82,6 +82,7 @@
 	<!-- /#logo-wrap -->
 		
 	<div id="top-wrap" class=" dev">
+		<div id="top-wrap-inner" class=" dev">
 
 		<div id="hidden-wrap">
 		    <?php if ($site_name || $site_slogan): ?>
@@ -163,7 +164,8 @@
     
     </div>
 	<!-- /#top-wrap -->
-	
+    </div>
+	  <!-- /#top-wrap-inner -->	
   </header>
   <!-- /#header -->
 

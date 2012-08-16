@@ -25,14 +25,30 @@ nav, .region-navigation
 
 /* style wefc main menu */
 #main-menu
-  ul.links li
-    margin: 0
-    padding: 0
-    a
-      background: hsl(94, 27%, 57%) url(images/tabs.png) repeat-x
-      border: solid hsl(94, 46%, 28%) 1px
+  overflow-y: hidden
+  width: 100%
+  background: url(images/tabs.png) repeat-x scroll 0 -43px hsl(94, 27%, 57%)
+  border: solid hsl(94, 46%, 28%) 1px
+  +border-radius(5px)
+  margin-right: 1px
+  ul.links
+    float: left
+    padding-left: 20px
+    li
+      margin: 0
+      padding: 0
+    li:first-child a
+      border-left: solid hsl(94, 46%, 28%) 1px
+    li a
+      border-right: solid hsl(94, 46%, 28%) 1px
+      background: url(images/tabs.png) repeat-y scroll 0 -41px hsl(94, 27%, 57%)
       padding: 5px 14px 5px 14px
-      margin: 0 1px 0 0
+      color: #ddd
+      +text-shadow(#333 1px 1px 1px)
+      &:hover
+        background-position: -1px -03px
+        color: hsl(44, 100%, 50%)
+
  
  
 /* Top navigation styling */  
