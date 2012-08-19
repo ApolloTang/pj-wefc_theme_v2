@@ -11,3 +11,22 @@ a
   +links-underline-color( $links-underline-color, $hover: $links-underline-color-hover, $active: false, $visited: false, $focus: false)
   +links-font-weight(normal, $hover: normal, $active: false, $visited: false, $focus: false)
   +links-txt-color( $links-txt-color, $hover: $links-txt-color-hover, $active: false, $visited: false, $focus: false)
+  
+
+//ddblock-display
+div.ddblock-cycle-upright20p div
+  &.slide-title
+    h2
+      font-size: 1.3em
+      line-height: 1em
+      a
+        +links-underline-style-important( none, $hover: false, $active: false, $visited: false, $focus: false)
+        +links-underline-color-important( $links-underline-color, $hover: $links-underline-color-hover, $active: false, $visited: false, $focus: false)
+        +links-font-weight-important( normal, $hover: normal, $active: false, $visited: false, $focus: false)
+        +links-txt-color-important( $links-txt-color, $hover: $links-txt-color-hover, $active: false, $visited: false, $focus: false)
+  &.slide-body-vertical, &.slide-read-more
+
+// read more button
+div.ddblock-cycle-upright20p div.slide-read-more a
+  font-family: $wefc-font !important
+  +links-underline-style-important( none, $hover: false, $active: false, $visited: false, $focus: false)

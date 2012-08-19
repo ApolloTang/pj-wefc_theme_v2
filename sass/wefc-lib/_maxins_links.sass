@@ -147,3 +147,129 @@
       &:active
         color: $active
 
+
+
+// replace underlines on links with bottom borders (with !important)
+=links-underline-style-important($normal, $hover: false, $active: false, $visited: false, $focus: false)
+  &
+    text-decoration: none !important
+    border-bottom-width: 1px !important
+    border-bottom-style: $normal !important
+    &:visited
+      border-bottom-style: $normal !important
+    &:focus
+      border-bottom-style: $normal !important
+    &:hover
+      border-bottom-style: $normal !important
+    &:active
+      border-bottom-style: $normal !important
+    @if $visited
+      &:visited
+        border-bottom-style: $visited !important
+    @if $focus
+      &:focus
+        border-bottom-style: $focus !important
+    @if $hover
+      &:hover
+        border-bottom-style: $hover !important
+    @if $active
+      &:active
+        border-bottom-style: $active !important
+
+=links-underline-color-important($normal, $hover: false, $active: false, $visited: false, $focus: false)
+  &
+    border-bottom-color:  $normal !important
+    &:visited
+      border-bottom-color: $normal !important
+    &:focus
+      border-bottom-color: $normal !important
+    &:hover
+      border-bottom-color: $normal !important
+    &:active
+      border-bottom-color: $normal !important
+    @if $visited
+      &:visited
+        border-bottom-color: $visited !important
+    @if $focus
+      &:focus
+        border-bottom-color: $focus !important
+    @if $hover
+      &:hover
+        border-bottom-color: $hover !important
+    @if $active
+      &:active
+        border-bottom-color: $active !important
+        
+=links-font-size-important($normal, $hover: false, $active: false, $visited: false, $focus: false)
+  &
+    font-size: $normal !important
+    &:visited
+      font-size: $normal !important
+    &:focus
+      font-size: $normal !important
+    &:hover
+      font-size: $normal !important
+    &:active
+      font-size: $normal !important
+    @if $visited
+      &:visited
+        font-size: $visited !important
+    @if $focus
+      &:focus
+        font-size: $focus !important
+    @if $hover
+      &:hover
+        font-size: $hover !important
+    @if $active
+      &:active
+        font-size: $active !important
+
+=links-font-weight-important($normal, $hover: false, $active: false, $visited: false, $focus: false)
+  &
+    font-weight: $normal !important
+    &:visited
+      font-weight: $normal !important
+    &:focus
+      font-weight: $normal !important
+    &:hover
+      font-weight: $normal !important
+    &:active
+      font-weight: $normal !important
+    @if $visited
+      &:visited
+        font-weight: $visited !important
+    @if $focus
+      &:focus
+        font-weight: $focus !important
+    @if $hover
+      &:hover
+        font-weight: $hover !important
+    @if $active
+      &:active
+        font-weight: $active !important
+
+=links-txt-color-important($normal, $hover: false, $active: false, $visited: false, $focus: false)
+  &
+    color: $normal !important
+    &:visited
+      color: $normal !important
+    &:focus
+      color: $normal !important
+    &:hover
+      color: $normal !important
+    &:active
+      color: $normal !important
+    @if $visited
+      &:visited
+        color: $visited !important
+    @if $focus
+      &:focus
+        color: $focus !important
+    @if $hover
+      &:hover
+        color: $hover !important
+    @if $active
+      &:active
+        color: $active  !important
+        
+               
