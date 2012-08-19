@@ -63,7 +63,7 @@ div.ddblock-cycle-upright20p div
     width: $ddblock-width
     /* width is set in $ddblock-width */
   &.slide-text-vertical
-    height: $ddblock-height - 10px  // :wefc:Apollo:2012+08+18: reduce height by 10 to account for img feather edge
+    height: $ddblock-height - 25px  // :wefc:Apollo:2012+08+18: reduce height to account for img feather edge
     width: 200px  // :wefc:Apollo:2012+08+18: was 140px
   &.slide-text-top
     top: 7px
@@ -208,11 +208,21 @@ div.ddblock-cycle-upright20p div
     height: 5px
     background-color: #ccc
 
-// :wefc:Apollo:2012+08+18: 
-// added, inner div need to increase width b/c div.slide-text-right's width had increased
+
+/* :wefc:Apollo:2012+08+18: 
+ added, width for inner div need to increase b/c div.slide-text-right's width had increased */
 div.ddblock-cycle-upright20p div
   &.slide-title, &.slide-body-vertical, &.slide-read-more
-    width: 180px
+    width: 180px  // make title, body, and div that contain read-more button wider
+    float: left
+  &.slide-text-vertical
+    padding-top: 20px  // move it down so it is not so close to the top
+  &.slide-title-vertical
+    padding-bottom: 20px // more space between title and body of text  
+  &.slide-read-more p a
+    top: 300px
+    
+  
 // read more button
 div.ddblock-cycle-upright20p div.slide-read-more a
   left: 55px

@@ -14,19 +14,27 @@ a
   
 
 //ddblock-display
+$ddblock-title-color: white
+$ddblock-title-color-hover: hsl(44, 100%, 50%)
+$readmore-txt-color: white
+$readmore-txt-color-hover: white
 div.ddblock-cycle-upright20p div
   &.slide-title
     h2
-      font-size: 1.3em
-      line-height: 1em
+      font-size: 1.3em  // font size for title in title
+      line-height: 1 // line height for title
       a
         +links-underline-style-important( none, $hover: false, $active: false, $visited: false, $focus: false)
         +links-underline-color-important( $links-underline-color, $hover: $links-underline-color-hover, $active: false, $visited: false, $focus: false)
         +links-font-weight-important( normal, $hover: normal, $active: false, $visited: false, $focus: false)
-        +links-txt-color-important( $links-txt-color, $hover: $links-txt-color-hover, $active: false, $visited: false, $focus: false)
-  &.slide-body-vertical, &.slide-read-more
+        +links-txt-color-important( $ddblock-title-color, $hover: $ddblock-title-color-hover, $active: false, $visited: false, $focus: false)
+  &.slide-body-vertical .slide-body-inner p
+    font-size: 14px  // font size for body
+    line-height: 1.4  // line hefigt for body
 
 // read more button
 div.ddblock-cycle-upright20p div.slide-read-more a
   font-family: $wefc-font !important
   +links-underline-style-important( none, $hover: false, $active: false, $visited: false, $focus: false)
+  +links-txt-color-important( $readmore-txt-color, $hover: $readmore-txt-color-hover, $active: false, $visited: false, $focus: false)
+  
