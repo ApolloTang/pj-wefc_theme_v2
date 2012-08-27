@@ -47,8 +47,29 @@ nav, .region-navigation
       +text-shadow(#333 1px 1px 1px)
       &:hover
         background-position: -1px -03px
-        color: hsl(44, 100%, 50%)
+        color: $wefc-yellow
 
+
+/* style wefc secondary menu and navigation region*/
+#navigation
+  #secondary-menu, .region-navigation
+    margin-top: 10px
+    margin-left: 20px
+    // +ol(red)  // for development
+    height: 25px    
+  #secondary-menu ul, .region-navigation ul.menu
+    li
+      padding: 0px
+      a
+        padding:
+          left: 10px
+          right: 10px
+        //background-color: #aaa
+        border-left: black solid 1px
+    li:first-child
+      a
+        border-left: transparent solid 0px
+      
  
  
 /* Top navigation styling */  

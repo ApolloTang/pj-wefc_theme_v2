@@ -146,7 +146,9 @@
 				<?php print theme('links__system_secondary_menu', array(
 				  'links' => $secondary_menu,
 				  'attributes' => array(
-					'class' => array('links', 'inline', 'clearfix'),
+					// 'class' => array('links', 'inline', 'clearfix'),  
+					// ApolloTang 2012 Aug 26 remove clearfix as it results in access height to <ul> 
+					'class' => array('links', 'inline'),
 				  ),
 				  'heading' => array(
 					'text' => $secondary_menu_heading,
