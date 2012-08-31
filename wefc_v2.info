@@ -87,7 +87,8 @@ stylesheets[all][] = css/wefc-theme.css
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = lib/hyphenator/Hyphenator.js
+scripts[] = js/script.js
 
 
 
