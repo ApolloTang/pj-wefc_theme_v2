@@ -238,3 +238,28 @@ function wefc_v2_preprocess_block(&$variables, $hook) {
 	) { $variables['block']->subject = ''; }
 }
 
+
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Override the search box to add our pretty graphic instead of the button.
+ */
+function wefc_v2_form_alter(&$form, &$form_state, $form_id) {
+	dpm($form_id);	// use this to get your form id
+	// debug($form_id);  // use this to get your form_id if you are logged-out
+}
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Override the search box to add our pretty graphic instead of the button.
+ */
+function wefc_v2_form_search_block_form_alter(&$form, &$form_state) {
+  dpm($form);
+
+  $form['actions']['submit']['#type'] = 'image_button';
+  $form['actions']['submit']['#src'] = drupal_get_path('theme', 'wefc_v2') . '/images/search.png';
+  $form['actions']['submit']['#attributes']['class'][] = 'btn';
+}
