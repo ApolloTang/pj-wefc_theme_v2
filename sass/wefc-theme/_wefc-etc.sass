@@ -22,14 +22,15 @@
  
 $form-outline-color: #aaa
 #search-block-form
-  line-height: 1em  // required for IE 8
+  line-height: 1  // required for IE 8
   .container-inline
     //+ol(green)
     border: 1px solid $form-outline-color
-    +border-radius(5px)
+    +border-radius(3px)
     -webkit-background-clip: padding-box
     -moz-background-clip: padding-box
-    background-clip: padding-box 
+    background-clip: padding-box
+    height: 24px 
     #edit-actions
       height: 24px
       width: 27px
@@ -37,21 +38,42 @@ $form-outline-color: #aaa
       #edit-submit--3, #edit-submit
         height: 24px
         width: 27px
-        //background-color: green
-        // --- Start: generted using http://www.colorzilla.com/gradient-editor/ 
-        // needs latest Compass, add '@import "compass"' to your scss
-        background-color: #b4ddb4 // Old browsers
-        @include filter-gradient(#b4ddb4, #006b00, vertical) // IE6-8
-        // IE9 SVG, needs conditional override of 'filter' to 'none'
-        $experimental-support-for-svg: true
-        @include background-image(linear-gradient(top,  hsla(120,38%,79%,1) 0%,hsla(120,38%,65%,1) 17%,hsla(120,38%,51%,1) 33%,hsla(120,100%,27%,1) 59%,hsla(120,100%,25%,1) 79%,hsla(120,100%,21%,1) 100%))
-        // --- END: generted using http://www.colorzilla.com/gradient-editor/ 
-        //+ol(pink)  // for debug
         vertical-align: bottom
     #edit-search-block-form--2
       height: 22px
       width: 200px  // input width
+      padding-left: 5px
+      padding-right: 5px
       border: 0px solid $form-outline-color
       //border-right: 1px solid $form-outline-color
       //vertical-align: bottom
       //+ol(red)
+
+/* gradient for search button */      
+#search-block-form
+  #edit-submit--3, #edit-submit
+    //background-color: green
+    // --- Start: generted using http://www.colorzilla.com/gradient-editor/ 
+    // needs latest Compass, add '@import "compass"' to your scss
+    background-color: #b4ddb4 // Old browsers
+    @include filter-gradient(#b4ddb4, #006b00, vertical) // IE6-8
+    // IE9 SVG, needs conditional override of 'filter' to 'none'
+    $experimental-support-for-svg: true
+    @include background-image(linear-gradient(top,  hsla(120,38%,79%,1) 0%,hsla(120,38%,65%,1) 17%,hsla(120,38%,51%,1) 33%,hsla(120,100%,27%,1) 59%,hsla(120,100%,25%,1) 79%,hsla(120,100%,21%,1) 100%))
+    // --- END: generted using http://www.colorzilla.com/gradient-editor/ 
+    //+ol(pink)  // for debug
+
+/* fix ie8 */
+.lt-ie9
+  .form-item-search-block-form
+    #edit-search-block-form--2
+      //+ol(red)
+      line-height: 1
+      height: 12px !important
+      padding-top: 5px  
+  #edit-actions
+    vertical-align: bottom
+    .form-submit
+      //+ol(black)
+
+
