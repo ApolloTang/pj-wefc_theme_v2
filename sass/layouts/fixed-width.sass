@@ -67,11 +67,11 @@ $zen-auto-include-item-base: false
  * Apollo Tang July 29, 2012
  * These wrappers: #logo-wrap, #top-wrap, and #slide-wrap were added for wefc
  */
-#logo-wrap /* Span 4 columns, starting in 2nd column from left. */
+#logo-wrap /* Span 3 columns, starting in 1st column from left. */
   @include zen-grid-item(3, 1)
 
 #top-wrap
-  /* Span 1 column, starting in 1st column from left. */
+  /* Span 11 column, starting in 4th column from left. */
   @include zen-grid-item(11, 4)
     
 #slide-wrap
@@ -104,21 +104,21 @@ $zen-auto-include-item-base: false
 
 .sidebar-first
   #content
-    /* Span 4 columns, starting in 2nd column from left. */
-    +zen-grid-item(11, 4)
+    /* Span 10 columns, starting in 5th column from left. */
+    +zen-grid-item(10, 5)
   .region-sidebar-first
-    /* Span 1 column, starting in 1st column from left. */
-    +zen-grid-item(3, 1)
+    /* Span 4 column, starting in 1st column from left. */
+    +zen-grid-item(4, 1)
 
 /*
  * The layout when there is only one sidebar, the right one. */
 
 .sidebar-second
   #content
-    /* Span 4 columns, starting in 1st column from left. */
+    /* Span 11 columns, starting in 1st column from left. */
     +zen-grid-item(11, 1)
   .region-sidebar-second
-    /* Span 1 column, starting in 5th column from left. */
+    /* Span 3 column, starting in 12th column from left. */
     +zen-grid-item(3, 12)
 
 /*
@@ -126,11 +126,11 @@ $zen-auto-include-item-base: false
 
 .two-sidebars
   #content
-    /* Span 3 columns, starting in 2nd column from left.  */
+    /* Span 8 columns, starting in 4nd column from left.  */
     +zen-grid-item(8, 4)
   .region-sidebar-first
-    /* Span 1 column, starting in 1st column from left.  */
+    /* Span 3 column, starting in 1st column from left.  */
     +zen-grid-item(3, 1)
   .region-sidebar-second
-    /* Span 1 column, starting in 5th column from left.  */
+    /* Span 3 column, starting in 12th column from left.  */
     +zen-grid-item(3, 12)
