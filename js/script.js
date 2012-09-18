@@ -14,10 +14,26 @@
 	Drupal.behaviors.wefc = {
 		attach : function(context, settings) {
 // - - - - - - - - - - - - - - - - - - - - - - - - -		
-			console.log('jQuery version ' + $().jquery);
+			//console.log('jQuery version ' + $().jquery);
 	
 			$('p').addClass('hyphenate').attr("lang","en");
 			Hyphenator.run();
+			
+            $('#edit-search-block-form--2').autofill({
+                        value: Drupal.t('enter keyword to search'),
+                        defaultTextColor: '#666',
+                        activeTextColor: '#000'
+                    });
+/*          $('#edit-search-block-form--2').focus(function(){  // doesn't work! need to use live
+                $(this).addClass('focused');
+                }).blur(function(){
+                    $(this).removeClass('focused');
+                });     */
+            $('#edit-search-block-form--2').live("focus", function(){ 
+                                                                $(this).addClass('focused');
+                                                            }).blur(function(){
+                                                                    $(this).removeClass('focused');
+                                                            });			
 
 // - - - - - - - - - - - - - - - - - - - - - - - - -	
 		}

@@ -41,7 +41,7 @@ $form-outline-color: #aaa
         vertical-align: bottom
     #edit-search-block-form--2
       height: 22px
-      width: 200px  // input width
+      width: 165px  // input width
       padding-left: 5px
       padding-right: 5px
       border: 0px solid $form-outline-color
@@ -68,12 +68,17 @@ $form-outline-color: #aaa
   .form-item-search-block-form
     #edit-search-block-form--2
       //+ol(red)
-      line-height: 1
+      line-height: .9
       height: 12px !important
-      padding-top: 5px  
+      padding-top: 5px
+      padding-bottom: 5px
+      vertical-align: top
   #edit-actions
     vertical-align: bottom
     .form-submit
       //+ol(black)
 
+.lt-ie9
+  .form-item-search-block-form
+    #edit-search-block-form--2.focused
 
