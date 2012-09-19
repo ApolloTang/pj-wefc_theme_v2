@@ -50,13 +50,12 @@ div.ddblock-cycle-upright20p div.slide-read-more a
   +links-txt-color-important( $readmore-txt-color, $hover: $readmore-txt-color-hover, $active: false, $visited: false, $focus: false)
 
 
-//text in main content
+/* general text styling in main content */
 #main .node
   //+ol(red) 
   header
     //+ol(blue)
     margin-top: 10px
-    margin-bottom: 20px
   p 
     //+ol(green)
     text-align: justify
@@ -70,4 +69,27 @@ div.ddblock-cycle-upright20p div.slide-read-more a
     font-size: 15px
     line-height: 1.5
     margin-bottom: 13px   
-        
+
+/* adjust vertical spaces between block in content */
+h2 + p, h1 + article 
+  margin-top: 10px
+  
+h2 + p.submitted
+  margin-top: 0px  
+  
+article header
+  margin-bottom: 5px  
+
+p
+  margin-top: 0px
+P + p
+  margin-top: 1em  
+  
+article + article
+  margin-top: 20px
+  
+article ul.links
+  margin: 0px
+  float: right
+  li
+    padding-right: 0px     

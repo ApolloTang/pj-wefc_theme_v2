@@ -237,10 +237,11 @@
 
 <?php print render($page['bottom']); ?>
 
-
+                    <div id ="bottom-hrule"></div>
                     <div id="copy-right" class="clearfix">
-                        <span id="copyright">©&nbsp;<?php print $copy_right_date ?>&nbsp;Westend Food Coop</span>
+                        
                         <span id="feed-icon"><?php print $feed_icons; //Apollo 2012 Sept 18:  relocated $feed_icon from above ?></span>
+                        <span id="copyright">©&nbsp;<?php print $copy_right_date ?>&nbsp;Westend Food Coop</span>
                     </div>
                     <!-- #/credit -->
       
