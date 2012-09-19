@@ -102,6 +102,10 @@
  */
 
 
+
+include("includes/helper.inc.php");
+include("includes/copyright_date.inc.php");
+
 /**
  * Override or insert variables into the maintenance page template.
  *
@@ -138,19 +142,20 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
 }
 // */
 
+
+
 /**
- * Override or insert variables into the page templates.
+ * implimenting hook_preprocess_page
  *
- * @param $variables
- *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
-}
-// */
+function wefc_v2_preprocess_page(&$vars, $hook) {
+
+  // insert copy right date into php.tpl.php
+  $vars['copy_right_date'] = copyright_date( 2011 );
+	
+
+}//END wefc_v2__preprocess_page()
+
 
 /**
  * Override or insert variables into the node templates.
@@ -204,6 +209,7 @@ function STARTERKIT_preprocess_region(&$variables, $hook) {
 }
 // */
 
+
 /**
  * Override or insert variables into the block templates.
  *
@@ -226,7 +232,7 @@ function wefc_v2_preprocess_block(&$variables, $hook) {
 	// WEFC:: added by Apollo Tang, Aug 10, 2012
 	// Code use in development
 	$dev = FALSE;  if ( $dev ==TRUE ) { 
-		dsm($variables['block']);
+		kpr($variables['block']);
 		//echo "<pre>"; var_dump($variables['block']->region); echo "</pre>";
 	} //End if ( $dev ==TRUE ) 
 	
@@ -236,7 +242,7 @@ function wefc_v2_preprocess_block(&$variables, $hook) {
 		|| $variables['block']->region == "search"
 		|| $variables['block']->region == "headline"	
 	) { $variables['block']->subject = ''; }
-}
+}// END: wefc_v2_preprocess_block
 
 
 
@@ -246,7 +252,7 @@ function wefc_v2_preprocess_block(&$variables, $hook) {
  * Override the search box to add our pretty graphic instead of the button.
  */
 function wefc_v2_form_alter(&$form, &$form_state, $form_id) {
-	dpm($form_id);	// use this to get your form id
+	//kpr($form_id);	// use this to get your form id
 	// debug($form_id);  // use this to get your form_id if you are logged-out
 }
 
@@ -257,9 +263,22 @@ function wefc_v2_form_alter(&$form, &$form_state, $form_id) {
  * Override the search box to add our pretty graphic instead of the button.
  */
 function wefc_v2_form_search_block_form_alter(&$form, &$form_state) {
-  dpm($form);
+  //kpr($form);
 
   $form['actions']['submit']['#type'] = 'image_button';
   $form['actions']['submit']['#src'] = drupal_get_path('theme', 'wefc_v2') . '/images/search.png';
   $form['actions']['submit']['#attributes']['class'][] = 'btn';
+}
+
+
+
+/**
+ * Implements hook_page_alter().
+ * 
+ */
+function wefc_v2_page_alter(&$page) {
+	// see 
+	// Drupalize.me - Advanced Theming for Drupal 7 Series/
+	// 12_Altering the page from the theme layer.flv
+	//kpr($page);
 }

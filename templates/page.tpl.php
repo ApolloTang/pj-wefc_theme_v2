@@ -207,7 +207,7 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
 
-      <?php print $feed_icons; ?>
+      <?php // print $feed_icons; //Apollo 2012 Sept 18:  move $feed_icons to the bottom ?>
     </div>
     <!-- /#content-inner -->
     </div>
@@ -236,3 +236,11 @@
 <!-- /#page -->
 
 <?php print render($page['bottom']); ?>
+
+
+                    <div id="copy-right" class="clearfix">
+                        <span id="copyright">©&nbsp;<?php print $copy_right_date ?>&nbsp;Westend Food Coop</span>
+                        <span id="feed-icon"><?php print $feed_icons; //Apollo 2012 Sept 18:  relocated $feed_icon from above ?></span>
+                    </div>
+                    <!-- #/credit -->
+      

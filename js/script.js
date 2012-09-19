@@ -21,7 +21,7 @@
 			
             $('#edit-search-block-form--2').autofill({
                         value: Drupal.t('enter keyword to search'),
-                        defaultTextColor: '#666',
+                        defaultTextColor: '#999',
                         activeTextColor: '#000'
                     });
 /*          $('#edit-search-block-form--2').focus(function(){  // doesn't work! need to use live
