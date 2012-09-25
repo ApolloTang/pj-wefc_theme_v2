@@ -1,7 +1,7 @@
 /* - - - - - - - - - - - - - - - - - - - - - - - File: sass/_wefc-etc.sass */
 // added by Apollo Tang
 
-/* - - images frame - - */
+/* - - BEGIN images framing - - */
 #main
   img 
     border: 0 none
@@ -20,11 +20,79 @@
   img.center
     margin: 15px auto
     display: block  
+    
+/* - - END images framing - - */
 
 
-/* - - search form - - */
+/* - - BEGIN site-wise input button - - */
+input
+  border: 1px solid $form-outline-color
+  +border-radius(3px)
+  -webkit-background-clip: padding-box
+  -moz-background-clip: padding-box
+  background-clip: padding-box
+  height: 24px
+  padding:
+    left: 5px
+    right: 5px
+
+
+    ///* fix ie8 */
+.lt-ie9 input.form-text
+  //+ol(red)
+  line-height: .4
+  height: 13px
+  padding-top: 9px 
+  vertical-align: bottom
+
  
-$form-outline-color: #aaa
+  
+input.form-submit, a.button
+  cursor: pointer 
+  padding: 2px 17px 3px
+  margin-bottom: 1em 
+  margin-right: 1em 
+  color: hsl(0, 0%, 35%) 
+  text-align: center 
+  font-weight: normal 
+  font-size: .9em //1.077em 
+  font-family: "Lucida Grande", Verdana, sans-serif 
+  border: 1px solid hsl(0, 0%, 89%) 
+  border-bottom: 1px solid hsl(0, 0%, 71%) 
+  border-left-color: hsl(0, 0%, 82%) 
+  border-right-color: hsl(0, 0%, 82%) 
+  background: url(images/buttons.png) 0 0 repeat-x 
+  -moz-border-radius: 20px 
+  -webkit-border-radius: 20px 
+  border-radius: 20px
+
+
+  ///* fix ie8 */
+.lt-ie9 input.form-submit, a.button
+//  +ol(blue)
+
+
+input.form-submit:active
+  background: hsl(0, 0%, 40%) 
+  color: white 
+  border-color: hsl(0, 0%, 33%) 
+  text-shadow: hsl(0, 0%, 13%) 0 -1px 0
+
+button:focus, button:active, input:focus, input:active, select:focus, select:active, textarea:focus, textarea:active 
+  box-shadow: 0 0 7px hsl(216, 100%, 50%)
+  z-index: 1 
+
+
+
+/* - - END site-wise input button - - */
+
+
+
+
+
+/* - - BEGIN: search form - - */
+ 
+
 #search-block-form
   line-height: 1  // required for IE 8
   .container-inline
@@ -39,23 +107,23 @@ $form-outline-color: #aaa
       height: 24px
       width: 27px
       //+ol(blue)
-      #edit-submit--3, #edit-submit
+      #edit-submit--3, #edit-submit--2, #edit-submit
         height: 24px
         width: 27px
         vertical-align: bottom
-    #edit-search-block-form--2
+    input#edit-search-block-form--2
       height: 22px
       width: 165px  // input width
       padding-left: 5px
       padding-right: 5px
       border: 0px solid $form-outline-color
       //border-right: 1px solid $form-outline-color
-      //vertical-align: bottom
+      vertical-align: top
       //+ol(red)
 
-/* gradient for search button */      
+    /* gradient for search button */      
 #search-block-form
-  #edit-submit--3, #edit-submit
+  #edit-submit--3, #edit-submit--2, input#edit-submit
     //background-color: green
     // --- Start: generted using http://www.colorzilla.com/gradient-editor/ 
     // needs latest Compass, add '@import "compass"' to your scss
@@ -66,8 +134,13 @@ $form-outline-color: #aaa
     @include background-image(linear-gradient(top,  hsla(120,38%,79%,1) 0%,hsla(120,38%,65%,1) 17%,hsla(120,38%,51%,1) 33%,hsla(120,100%,27%,1) 59%,hsla(120,100%,25%,1) 79%,hsla(120,100%,21%,1) 100%))
     // --- END: generted using http://www.colorzilla.com/gradient-editor/ 
     //+ol(pink)  // for debug
+    +border-radius(0px)
+    padding: 0px
+    border-width: 0px
+    margin: 0px
+     
 
-  /* fix ie8 */
+    /* fix ie8 */
 .lt-ie9
   .form-item-search-block-form
     #edit-search-block-form--2
@@ -87,12 +160,19 @@ $form-outline-color: #aaa
     #edit-search-block-form--2.focused
 
 
-/* - - credit and other at the bottom - - */
+/* - - END: search form - - */
+
+
+
+/* - - BEGIN credit and other at the bottom - - */
 #copy-right
   border-top: solid 1px $wefc-green
   padding-top: 10px
-  margin-top: 20px
+  margin-top: 50px
   a.feed-icon img
     vertical-align: -3px
   span#copyright
     font-size: 14px 
+
+
+/* - - END credit and other at the bottom - - */
