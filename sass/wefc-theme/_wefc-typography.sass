@@ -15,9 +15,13 @@ label, .form-item label
 h1, h2
   font-weight: normal
   font-family: $wefc-title-font  // see _base.scss for definition of font stack
+  margin-bottom: 0
   
 ul 
   list-style-type: none
+
+.bullet ul
+  list-style-type: disc
 
 
 /* ------ typography link */
@@ -79,12 +83,15 @@ div.ddblock-cycle-upright20p div.slide-read-more a
     margin-bottom: 13px
 .sidebars
   padding-top: 50px
-  p, ul
-    margin-top: 10px
+  p, ul, ol
+    margin-top: 7px
     text-align: justify
-    font-size: 15px
+    font-size: 13px
     line-height: 1.5
-    margin-bottom: 13px   
+    margin-bottom: 13px
+  ul, ol
+    padding-left: 15px
+     
 
   
 /* adjust vertical spaces between block in content */
