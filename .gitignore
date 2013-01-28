@@ -7,3 +7,5 @@ css/*
 custom/modules/ddblock/upright20p/ddblock-cycle-upright20p.css
 TODO.txt
 !css/images/
+!css/README-wefc.txt
+!css/no-sass.css
